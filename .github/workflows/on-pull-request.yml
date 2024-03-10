@@ -17,6 +17,9 @@ jobs:
       with:
         toolchain: stable
         components: rustfmt, clippy
+    - name: Installs
+      run: |
+        apt install libasound2-dev libudev-dev pkg-config
     - name: Run check
       run: |
         cd app
